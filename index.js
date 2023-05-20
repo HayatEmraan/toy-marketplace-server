@@ -5,14 +5,10 @@ const cors = require("cors");
 const jwt = require("jsonwebtoken");
 require("dotenv").config();
 
-
 app.use(cors());
 app.use(express.json());
 
-
-
-
-const { MongoClient, ServerApiVersion } = require("mongodb");
+const { MongoClient, ServerApiVersion, ObjectId } = require("mongodb");
 const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.1ki0ifk.mongodb.net/?retryWrites=true&w=majority`;
 
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
@@ -27,10 +23,20 @@ const client = new MongoClient(uri, {
 async function run() {
   try {
     // Connect the client to the server	(optional starting in v4.7)
-      await client.connect();
-      
+    await client.connect();
+
     const toyCollection = client.db("toyCollection").collection("toys");
-      
+    app.get("/api/all", async (req, res) => {
+      const toys = await toyCollection.find({}).toArray();
+      res.send(toys);
+    });
+
+    app.get("/api/v1/:id", async (req, res) => {
+      const id = req.params.id;
+      const find = { _id: new ObjectId(id) };
+      const toy = await toyCollection.findOne(find);
+      res.send(toy);
+    });
     // Send a ping to confirm a successful connection
     await client.db("admin").command({ ping: 1 });
     console.log(
@@ -43,11 +49,8 @@ async function run() {
 }
 run().catch(console.dir);
 
-
-
-app.get('/', function (req, res) {
-    res.send('Server is running');
+app.get("/", function (req, res) {
+  res.send("Server is running");
 });
-
 
 app.listen(port);
