@@ -1,0 +1,50 @@
+[
+  {
+    "name": "PIÑATA 2GO 5-Point Star",
+    "price": 19.99,
+    "category": "Robot",
+    "sub_category": "Pinata",
+    "rating": 4.5,
+    "description": "Our piñatas are made from recycled cardboard plus tissue paper for decoration. Piñata2go fuses tradition with innovation, combining the most representative piñata of Mexican culture, such as the 5-pointed star, with a modern, avant-garde, functional approach to storage, distribution and transportation. We have 7 color combinations of the standard size of a star piñata. All our piñatas are foldable, so they are practical and functional, making them easy to move and store.",
+    "image": "https://m.media-amazon.com/images/I/71m1NPsXcpL._AC_SX679_.jpg",
+    "featuers": [
+      "FUNCTIONAL: Foldable Piñata with functional design to maximize storage and transportation",
+      "AS SEEN ON SHARK TANK: Project funded by 2 Sharks in Shark Tank Mexico Show",
+      "No Soldering Required",
+      "READY FOR THE PARTY: Assemble your PIÑATA 2GO in seconds and fill it with up to 8.8 lbs of candy (4 Kg)"
+    ],
+    "tag": "Robot"
+  },
+  {
+    "name": "PIÑATA 2GO 5-Point Star",
+    "price": 29.99,
+    "category": "Robot",
+    "sub_category": "Pinata",
+    "rating": 4.5,
+    "description": "Our piñatas are made from recycled cardboard plus tissue paper for decoration. Piñata2go fuses tradition with innovation, combining the most representative piñata of Mexican culture, such as the 5-pointed star, with a modern, avant-garde, functional approach to storage, distribution and transportation. We have 7 color combinations of the standard size of a star piñata. All our piñatas are foldable, so they are practical and functional, making them easy to move and store.",
+    "image": "https://m.media-amazon.com/images/I/71pWURnJm5L._AC_SX679_.jpg",
+    "featuers": [
+      "FUNCTIONAL: Foldable Piñata with functional design to maximize storage and transportation",
+      "AS SEEN ON SHARK TANK: Project funded by 2 Sharks in Shark Tank Mexico Show",
+      "No Soldering Required",
+      "READY FOR THE PARTY: Assemble your PIÑATA 2GO in seconds and fill it with up to 8.8 lbs of candy (4 Kg)"
+    ],
+    "tag": "Robot"
+  },
+  {
+    "name": "Amscan 2GO PIÑATA Dark",
+    "price": 39.99,
+    "category": "Robot",
+    "sub_category": "Pinata",
+    "rating": 4.5,
+    "description": "Our piñatas are made from recycled cardboard plus tissue paper for decoration. Piñata2go fuses tradition with innovation, combining the most representative piñata of Mexican culture, such as the 5-pointed star, with a modern, avant-garde, functional approach to storage, distribution and transportation. We have 7 color combinations of the standard size of a star piñata. All our piñatas are foldable, so they are practical and functional, making them easy to move and store.",
+    "image": "https://m.media-amazon.com/images/I/71m1NPsXcpL._AC_SX679_.jpg",
+    "featuers": [
+      "FUNCTIONAL: Foldable Piñata with functional design to maximize storage and transportation",
+      "AS SEEN ON SHARK TANK: Project funded by 2 Sharks in Shark Tank Mexico Show",
+      "No Soldering Required",
+      "READY FOR THE PARTY: Assemble your PIÑATA 2GO in seconds and fill it with up to 8.8 lbs of candy (4 Kg)"
+    ],
+    "tag": "Robot"
+  }
+]

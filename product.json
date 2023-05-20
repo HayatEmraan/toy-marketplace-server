@@ -1,0 +1,56 @@
+[
+    {
+      "name": "OWI Inc Robotic Arm Edge",
+      "price": 19.99,
+      "category": "Robot",
+      "sub_category": "Arm Edge",
+      "rating": 4.5,
+      "description": "OWI has made robotic arm technology more affordable without compromising quality. With Robotic Arm Edge, command the gripper to open and close, wrist motion of 120 degrees, an extensive elbow range of 300 degrees, base rotation of 270 degrees, base motion of 180 degrees, vertical reach of 15 inches, horizontal reach of 12.6 inches, and lifting capacity of 100g. WOW! Some of the added features include a search light design on the gripper and a safety gear audible indicator is included on all five gear boxes to prevent any potential injury or gear breakage during operation. How does this equate to fun?",
+      "image": "https://m.media-amazon.com/images/I/61B9OYgejML._AC_SX679_.jpg",
+      "featuers": [
+        "Command the Robotic Arm Edge with for multiple movements and functions Robotic arm gripper opens and closes",
+        "Movement includes radial wrist motion of 120 Degree, an extensive elbow range of motion of 300 Degree, base rotation of 270 Degree, base motion of 180 Degree",
+        "No Soldering Required",
+        "OWI is the premier line of educational robotics kits"
+      ],
+      "tag": "Robot"
+    },
+    {
+      "name": "Robot Arm Manipulator Kits",
+      "price": 29.99,
+      "category": "Robot",
+      "sub_category": "Arm Edge",
+      "rating": 4.0,
+      "description": "DIY Assembled 6 - dof Mechanics Servo Handle Robot Arm for Robotics Learning Kits Servo finish the grabing or lisfting action front and back , up and down , and left and right Can be used to test the servo motor coding for robotic engineers Suitable for learning the controling theory of automatic robotic arm ; guest space and students learning kitsAlso learn serial ports controlling servo and potentiometer controlling servo",
+      "image": "https://i.ebayimg.com/images/g/zWUAAOSw~rBdsXqA/s-l1600.jpg",
+      "featuers": [
+        "Command the Robotic Arm Edge with for multiple movements and functions Robotic arm gripper opens and closes",
+        "Movement includes radial wrist motion of 120 Degree, an extensive elbow range of motion of 300 Degree, base rotation of 270 Degree, base motion of 180 Degree",
+        "No Soldering Required",
+        "OWI is the premier line of educational robotics kits"
+      ],
+      "tag": "Robot"
+    },
+    {
+      "name": "OWI Inc Hydraulic Arm Edge",
+      "price": 17.99,
+      "category": "Robot",
+      "sub_category": "Arm Edge",
+      "rating": 4.5,
+      "description": "Robotic arm technology just got a little more interesting with hydro-mechanically fun. With Hydraulic Arm Edge, you will command six axes of varied movements: the gripper to open and close up to 1.89 inches, wrist rotation of 180 degrees, wrist mobility of 98 degrees, elbow range of 44 degrees, base rotation of 270 degrees, and shoulder motion of 45 degrees. With a vertical reach of 16.35 inches, horizontal reach of 12.42 inches, and lifting capacity of 50g, your robotic friend is ready for your genius to erupt. With the removal of the gripper, you can activate the suction apparatus. This feature enables the user to elevate objects with a larger surface area (like a small mobile phone). Another prodigious attribution is a braking system that is integrated in the lever controllers to execute all commands accurately. WOW! How does this equate to fun? Your children will have total command and manipulation using the science principles of a Hydraulic system and its application. Easy to follow instructions with detailed graphic illustrations pave the way for successful and satisfying kit building. Compliment your engineering, math, science, and technology (STEM) learning strategy. No battery or motor required. It is powered by water; thus, the 'Hydraulic' significance and how it manipulates axes movement via lever controllers. - For more than 3 decades, OWI continues its pursuit to satisfy educational instructors and the most discriminating parents. Hydraulic Arm Edge is recommended for ages 10 and up, but with its 229 assembly parts, it will challenge the beginner engineering enthusiasts.",
+      "image": "https://m.media-amazon.com/images/I/61y0PecaQVL._AC_UL320_.jpg",
+      "featuers": ["Step away from the grid - Hydraulic Robotic Arm - No Electricity or batteries needed", "Discover hydro-mechanical technology and have fun operating your own hydro-mechanical robotic arm",  "Detailed graphic illustrations equate to successful kit building. - OWI products are made in Taiwan and include assembly instructions only in English. Other items not matching these descriptions are illegal copies"],
+      "tag": "Robot"
+    },
+    {
+      "name": "Yahboom Raspberry Pi Robotic Arm",
+      "price": 27.99,
+      "category": "Robot",
+      "sub_category": "Arm Edge",
+      "rating": 4.5,
+      "description": "【Artificial Intelligence Robotic Arm with Camera】Robotic arm comes with camera to achieve FPV video transmission. The robotic arm can recognize colors, specific gestures and faces, respond to the recognized gestures and track the recognized faces, track the corresponding colors, and grab the corresponding designated color objects. These recognition, tracking and grabbing actions fully reflect the AI bionic characteristics of robot arm. DOFBOT starts to take you into the field of AI robotics.【DOFBOT Motion Control】 Robotic arm not only has its own fixed action group, but also can",
+      "image": "https://m.media-amazon.com/images/I/61y0PecaQVL._AC_UL320_.jpg",
+      "featuers": ["【Artificial Intelligence Robotic Arm with Camera】Robotic arm comes with camera to achieve FPV video transmission. The robotic arm can recognize colors, specific gestures and faces, respond to the recognized gestures and track the recognized faces, track the corresponding colors, and grab the corresponding designated color objects. These recognition, tracking and grabbing actions fully reflect the AI bionic characteristics of robot arm. DOFBOT starts to take you into the field of AI robotics.", "Discover hydro-mechanical technology and have fun operating your own hydro-mechanical robotic arm",  "【Easy to Get Start & Online Technical Support】The assembled robotic arm can be controlled directly by simply installation and quick connection to the network (Based on the factory burned image). However, this robotic arm is for DIY makers with basic Python programming knowledge. Yahboom provide a large amount of course materials and online technical support is available. If you encounter difficulties, pls contact Yahboom. ***Raspberry Pi 4B (4G or 8G) is recommended"],
+      "tag": "Robot"
+    }
+]
