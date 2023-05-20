@@ -4,6 +4,7 @@ const port = process.env.PORT || 3000;
 const cors = require("cors");
 const jwt = require("jsonwebtoken");
 require("dotenv").config();
+const blogs = require("./blogs.json");
 
 app.use(cors());
 app.use(express.json());
@@ -64,5 +65,9 @@ run().catch(console.dir);
 app.get("/", function (req, res) {
   res.send("Server is running");
 });
+
+app.get('/temp', (req, res) => {
+  res.send(blogs)
+})
 
 app.listen(port);

@@ -1,0 +1,45 @@
+[
+  {
+    "topic": {
+      "question": "What is an access token and refresh token? How do they work and where should we store them on the client-side?",
+      "answer": "Access tokens and refresh tokens are used in authentication systems. An access token is a credential that is used to access protected resources on behalf of an authenticated user. It is typically a string that is included in API requests to verify the user's authorization. Access tokens have a limited lifespan and need to be periodically renewed or refreshed.\n\nA refresh token is a longer-lived credential that is used to obtain a new access token without requiring the user to re-authenticate. When an access token expires, the refresh token can be used to request a new access token from the authentication server.\n\nBoth the access token and refresh token should be securely stored on the client-side. The access token is often stored in memory or a local storage mechanism provided by the client platform, such as a browser's session storage or cookies. The refresh token, being a long-lived credential, needs to be stored in a more secure manner, such as an HTTP-only cookie or a secure storage mechanism provided by the client platform."
+    },
+    "publish_date": "Mar 16, 2019",
+    "author_name": "John Doe",
+    "img": "https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+    "post_category": "Authentication",
+    "author_job_position": "Security Engineer"
+  },
+  {
+    "topic": {
+      "question": "Compare SQL and NoSQL databases",
+      "answer": "This article provides a comprehensive comparison between SQL and NoSQL databases, highlighting their differences in terms of data structure, scalability, querying capabilities, and use cases."
+    },
+    "publish_date": "May 18, 2022",
+    "author_name": "John Smith",
+    "img": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+    "post_category": "Technology",
+    "author_job_position": "Senior Database Engineer"
+  },
+  {
+    "topic": {
+      "question": "What is express js? What is Nest JS?",
+      "answer": "Express.js is a fast and minimalist web application framework for Node.js. It provides a robust set of features for building web applications and APIs, including routing, middleware support, and template engines. Express.js is widely used in the Node.js ecosystem and is known for its simplicity and flexibility."
+    },
+    "publish_date": "Jan 18, 2022",
+    "author_name": "B.V James",
+    "img": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80",
+    "post_category": "Web Development",
+    "author_job_position": "Senior Software Engineer"
+  },
+  {
+    "topic": {
+      "question": "MongoDB aggregate is a powerful framework for performing data aggregation operations on MongoDB collections. It allows you to process and analyze data using a variety of stages such as filtering, grouping, projecting, and aggregating. By using the aggregate pipeline, you can perform complex data transformations and computations on your data, providing flexibility and efficiency in querying and analyzing large datasets."
+    },
+    "publish_date": "Sep 18, 2022",
+    "author_name": "Peter John",
+    "img": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80",
+    "post_category": "Technology",
+    "author_job_position": "Senior Software Engineer"
+  }
+]

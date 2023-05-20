@@ -4,7 +4,9 @@
     "price": 19.99,
     "category": "Robot",
     "sub_category": "Arm Edge",
+    "quantity": 12,
     "rating": 4.5,
+    "seller": "James Vince",
     "description": "OWI has made robotic arm technology more affordable without compromising quality. With Robotic Arm Edge, command the gripper to open and close, wrist motion of 120 degrees, an extensive elbow range of 300 degrees, base rotation of 270 degrees, base motion of 180 degrees, vertical reach of 15 inches, horizontal reach of 12.6 inches, and lifting capacity of 100g. WOW! Some of the added features include a search light design on the gripper and a safety gear audible indicator is included on all five gear boxes to prevent any potential injury or gear breakage during operation. How does this equate to fun?",
     "image": "https://m.media-amazon.com/images/I/61B9OYgejML._AC_SX679_.jpg",
     "featuers": [
@@ -18,6 +20,8 @@
   {
     "name": "Robot Arm Manipulator Kits",
     "price": 29.99,
+    "quantity": 18,
+    "seller": "Akbar",
     "category": "Robot",
     "sub_category": "Arm Edge",
     "rating": 4.0,
@@ -34,6 +38,8 @@
   {
     "name": "OWI Inc Hydraulic Arm Edge",
     "price": 17.99,
+    "quantity": 13,
+    "seller": "James Smith",
     "category": "Robot",
     "sub_category": "Arm Edge",
     "rating": 4.5,
@@ -49,6 +55,8 @@
   {
     "name": "Yahboom Raspberry Pi Robotic Arm",
     "price": 27.99,
+    "quantity": 24,
+    "seller": "Meherun",
     "category": "Robot",
     "sub_category": "Arm Edge",
     "rating": 4.5,
@@ -64,6 +72,8 @@
   {
     "name": "Transformers Toys Legacy Evolution",
     "price": 19.99,
+    "quantity": 33,
+    "seller": "John Smith",
     "category": "Robot",
     "sub_category": "Transformers",
     "rating": 4.5,
@@ -80,6 +90,8 @@
   {
     "name": "Transformers Toys Legacy Evolution",
     "price": 25.99,
+    "quantity": 34,
+    "seller": "Jos Smith",
     "category": "Robot",
     "sub_category": "Transformers",
     "rating": 4.5,
@@ -96,6 +108,7 @@
   {
     "name": "Transformers Toys Heroes",
     "price": 15.99,
+    "quantity": 11,
     "category": "Robot",
     "sub_category": "Transformers",
     "rating": 4.5,
@@ -112,6 +125,7 @@
   {
     "name": "PIÑATA 2GO 5-Point Star",
     "price": 19.99,
+    "quantity": 32,
     "category": "Robot",
     "sub_category": "Pinata",
     "rating": 4.5,
@@ -128,6 +142,8 @@
   {
     "name": "PIÑATA 2GO 5-Point Star",
     "price": 29.99,
+    "quantity": 42,
+    "seller": "Ujbejk",
     "category": "Robot",
     "sub_category": "Pinata",
     "rating": 4.5,
@@ -144,6 +160,8 @@
   {
     "name": "Amscan 2GO PIÑATA Dark",
     "price": 39.99,
+    "quantity": 27,
+    "seller": "Corno Bhutt",
     "category": "Robot",
     "sub_category": "Pinata",
     "rating": 4.5,
@@ -160,6 +178,7 @@
   {
     "name": "Centy Toys Plastic Honda",
     "price": 6.99,
+    "seller": "Ajay Bhutt",
     "category": "Car",
     "sub_category": "GeneralCar",
     "rating": 4.5,
@@ -208,6 +227,8 @@
   {
     "name": "CNG Auto Rickshaw",
     "price": 7.99,
+    "quantity": 90,
+    "seller": "Expo",
     "category": "Car",
     "sub_category": "GeneralCar",
     "rating": 4.5,
@@ -240,6 +261,8 @@
   {
     "name": "Jada Toys Optimus Prime",
     "price": 23.99,
+    "quantity": 99,
+    "seller": "Marvel Team",
     "category": "Car",
     "sub_category": "SmartCar",
     "rating": 4.5,
@@ -256,7 +279,9 @@
   {
     "name": "URVP Deformation RC",
     "price": 18.99,
+    "quantity": 19,
     "category": "Car",
+    "seller": "CRED",
     "sub_category": "SmartCar",
     "rating": 4.5,
     "description": "It has 4 smooth wheels and could finish 360 degree turning flexibly in both robot model and car shape.There are LED headlights and the robot has an exciting sounds when you speed up, play forward, backward, turn left and turn right. It could transform automatically from car to robot when you hit the button on the remote control. Transforms back and forth easily and quite awesome. Combine car and robot. With an USB charge cable, it could charge easily and everywhere. Full charge for 1h and it will last up for 20-30mins.",
@@ -272,6 +297,7 @@
   {
     "name": "DJI RoboMaster S1",
     "price": 34.99,
+    "quantity": 12,
     "category": "Car",
     "sub_category": "SmartCar",
     "rating": 4.5,
@@ -288,6 +314,8 @@
   {
     "name": "Offo Disney Princesses",
     "price": 11.99,
+    "quantity": 77,
+    "seller": "James Vince",
     "category": "Disney",
     "sub_category": "DisneyGirls",
     "rating": 4.5,
@@ -304,6 +332,7 @@
   {
     "name": "Kawaii Kart | Childhood Cartoon",
     "price": 13.99,
+    "quantity": 76,
     "category": "Disney",
     "sub_category": "DisneyGirls",
     "rating": 4.5,
@@ -320,6 +349,7 @@
   {
     "name": "Offo Disney Princesses",
     "price": 15.99,
+    "quantity": 92,
     "category": "Disney",
     "sub_category": "DisneyGirls",
     "rating": 4.5,
@@ -336,7 +366,9 @@
   {
     "name": "Frank Disney Princess Snow",
     "price": 11.99,
+    "quantity": 102,
     "category": "Disney",
+    "seller": "James Vince",
     "sub_category": "DisneyBoys",
     "rating": 4.5,
     "description": "The world of Princess dolls is getting a stylish upgrade. The collector will love playing out magical moments from the princess world, as well as imagining her own adventures with the princess. These are super cute, they can decorate your cake, popular crafts projects for home and office use, such as shopping lists, children's art, or reminders on the refrigerator door, or simply serves as decoration. Ideal for a miniature fairy garden, home, office decoration, small flower pot decorative, cake decor, or cupcake toppers for birthday party toys. A beautiful collectible that represents the heroic attitude and goodness. Quality product with an Attractive, Compact, and Lightweight Design. Made of PVC-Resin. Solid and Durable Design. The item comes packed in bubble wrap to avoid any damage to the product. Perfect collectible for someone who loves the animated characters for their Bravery, Honesty, Politeness, Determination, Will Power, and Of course for the Romantic story of finding their True Love and Purpose. Gifting Occasions of great toy figures for children, friends, or yourself. kids will love dressing their dolls up and imagining them dancing the night away at palace parties, making this doll set a great birthday gift or holiday present for kids.",
@@ -368,7 +400,9 @@
   {
     "name": "Frank Disney The Lion King",
     "price": 15.99,
+    "quantity": 12,
     "category": "Disney",
+    "seller": "James Vince",
     "sub_category": "DisneyBoys",
     "rating": 4.5,
     "description": "The world of Princess dolls is getting a stylish upgrade. The collector will love playing out magical moments from the princess world, as well as imagining her own adventures with the princess. These are super cute, they can decorate your cake, popular crafts projects for home and office use, such as shopping lists, children's art, or reminders on the refrigerator door, or simply serves as decoration. Ideal for a miniature fairy garden, home, office decoration, small flower pot decorative, cake decor, or cupcake toppers for birthday party toys. A beautiful collectible that represents the heroic attitude and goodness. Quality product with an Attractive, Compact, and Lightweight Design. Made of PVC-Resin. Solid and Durable Design. The item comes packed in bubble wrap to avoid any damage to the product. Perfect collectible for someone who loves the animated characters for their Bravery, Honesty, Politeness, Determination, Will Power, and Of course for the Romantic story of finding their True Love and Purpose. Gifting Occasions of great toy figures for children, friends, or yourself. kids will love dressing their dolls up and imagining them dancing the night away at palace parties, making this doll set a great birthday gift or holiday present for kids.",
@@ -400,6 +434,7 @@
   {
     "name": "Marvel Spidey | Childhood Cartoon",
     "price": 13.99,
+    "quantity": 12,
     "category": "Marvel",
     "sub_category": "MarvelToys",
     "rating": 4.5,
@@ -416,6 +451,8 @@
   {
     "name": "Marvel Hasbro 9.5-inch",
     "price": 12.99,
+    "seller": "James Vince",
+    "quantity": 21,
     "category": "Marvel",
     "sub_category": "MarvelToys",
     "rating": 4.5,
@@ -432,7 +469,9 @@
   {
     "name": "Marvel Spider-Man: Across",
     "price": 17.99,
+    "quantity": 33,
     "category": "Marvel",
+    "seller": "Spider Man",
     "sub_category": "MarvelToys",
     "rating": 4.5,
     "description": "The world of Princess dolls is getting a stylish upgrade. The collector will love playing out magical moments from the princess world, as well as imagining her own adventures with the princess. These are super cute, they can decorate your cake, popular crafts projects for home and office use, such as shopping lists, children's art, or reminders on the refrigerator door, or simply serves as decoration. Ideal for a miniature fairy garden, home, office decoration, small flower pot decorative, cake decor, or cupcake toppers for birthday party toys. A beautiful collectible that represents the heroic attitude and goodness. Quality product with an Attractive, Compact, and Lightweight Design. Made of PVC-Resin. Solid and Durable Design. The item comes packed in bubble wrap to avoid any damage to the product. Perfect collectible for someone who loves the animated characters for their Bravery, Honesty, Politeness, Determination, Will Power, and Of course for the Romantic story of finding their True Love and Purpose. Gifting Occasions of great toy figures for children, friends, or yourself. kids will love dressing their dolls up and imagining them dancing the night away at palace parties, making this doll set a great birthday gift or holiday present for kids.",
