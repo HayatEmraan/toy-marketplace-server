@@ -28,21 +28,50 @@ async function run() {
 
     const toyCollection = client.db("toyCollection").collection("toys");
 
-    app.post("jwt", async (req, res) => { 
-      const query = req.body.email;
+    app.post("/jwt", async (req, res) => {
+      const query = req.body;
       console.log(query);
       const token = jwt.sign(query, process.env.DB_KEY, {
         expiresIn: "1h",
       });
-      res.send(token);
-    })
+      res.send({ token });
+    });
 
     app.post("/api/toyCollection", async (req, res) => {
       const toy = req.body;
       const result = await toyCollection.insertOne(toy);
       res.send(result);
     });
-    app.patch("/api/toyCollection/:id", async (req, res) => { 
+    app.get(
+      "/api/query",
+      (req, res, next) => {
+        const query = req.headers?.authorization;
+        const queryToken = query?.split(' ')[1];
+        jwt.verify(queryToken, process.env.db_KEY, function (err, result) {
+          if (err) {
+            return res.status(401).send("Unauthorized Access");
+          }
+          req.decoded = result;
+          next();
+        });
+      },
+      async (req, res) => {
+        console.log(req.decoded);
+        if (req.decoded.email !== req.query.email) {
+          return res.status(401).send("Unauthorized Access");
+        }
+        const query = req.query;
+        console.log(query);
+        const toys = await toyCollection.find({ email: query.email }).toArray();
+        res.send(toys);
+      }
+    );
+    app.delete("/api/query/:id", async (req, res) => { 
+      const params = req.params.id;
+      const result = await toyCollection.deleteOne({ _id: new ObjectId(params) });
+      res.send(result);
+    })
+    app.patch("/api/toyCollection/:id", async (req, res) => {
       const params = req.params.id;
       const toy = req.body;
       const result = await toyCollection.updateOne(
@@ -50,7 +79,7 @@ async function run() {
         { $set: toy }
       );
       res.send(result);
-    })
+    });
     app.get("/api/all", async (req, res) => {
       const toys = await toyCollection.find({}).toArray();
       res.send(toys);
