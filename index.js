@@ -27,6 +27,30 @@ async function run() {
     await client.connect();
 
     const toyCollection = client.db("toyCollection").collection("toys");
+
+    app.post("jwt", async (req, res) => { 
+      const query = req.body.email;
+      console.log(query);
+      const token = jwt.sign(query, process.env.DB_KEY, {
+        expiresIn: "1h",
+      });
+      res.send(token);
+    })
+
+    app.post("/api/toyCollection", async (req, res) => {
+      const toy = req.body;
+      const result = await toyCollection.insertOne(toy);
+      res.send(result);
+    });
+    app.patch("/api/toyCollection/:id", async (req, res) => { 
+      const params = req.params.id;
+      const toy = req.body;
+      const result = await toyCollection.updateOne(
+        { _id: new ObjectId(params) },
+        { $set: toy }
+      );
+      res.send(result);
+    })
     app.get("/api/all", async (req, res) => {
       const toys = await toyCollection.find({}).toArray();
       res.send(toys);
@@ -66,8 +90,8 @@ app.get("/", function (req, res) {
   res.send("Server is running");
 });
 
-app.get('/temp', (req, res) => {
-  res.send(blogs)
-})
+app.get("/temp", (req, res) => {
+  res.send(blogs);
+});
 
 app.listen(port);
