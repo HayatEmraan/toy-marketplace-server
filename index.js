@@ -37,6 +37,18 @@ async function run() {
       const toy = await toyCollection.findOne(find);
       res.send(toy);
     });
+    app.get("/api/cat/:cat", async (req, res) => {
+      const id = req.params.cat;
+      const find = { category: id };
+      const toy = await toyCollection.find(find).toArray();
+      res.send(toy);
+    });
+    app.get("/api/sub/:sub", async (req, res) => {
+      const id = req.params.sub;
+      const find = { sub_category: id };
+      const toy = await toyCollection.find(find).toArray();
+      res.send(toy);
+    });
     // Send a ping to confirm a successful connection
     await client.db("admin").command({ ping: 1 });
     console.log(
