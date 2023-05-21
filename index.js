@@ -84,6 +84,14 @@ async function run() {
       const toys = await toyCollection.find({}).toArray();
       res.send(toys);
     });
+    app.get("/api/all/limit", async (req, res) => { 
+      const cursor = await toyCollection
+        .find({}, { sort: { _id: -1 } })
+        .limit(20)
+        .toArray();
+      res.send(cursor);
+
+    })
 
     app.get("/api/v1/:id", async (req, res) => {
       const id = req.params.id;
@@ -99,8 +107,8 @@ async function run() {
     });
     app.get("/api/sub/:sub", async (req, res) => {
       const id = req.params.sub;
-      const find = { sub_category: id };
-      const toy = await toyCollection.find(find).toArray();
+      const filter = { sub_category: id };
+      const toy = await toyCollection.find(filter).toArray();
       res.send(toy);
     });
     // Send a ping to confirm a successful connection
