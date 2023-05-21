@@ -91,8 +91,17 @@ async function run() {
         .toArray();
       res.send(cursor);
 
-    })
-
+      })
+    app.get("/api/all/sortings/ascending", async (req, res) => {
+      const mysort = { price: 1 };
+      const toys = await toyCollection.find({}).sort(mysort).toArray();
+      res.send(toys);
+    });
+    app.get("/api/all/sortings/descending", async (req, res) => {
+      const mysort = { price: - 1 };
+      const toys = await toyCollection.find({}).sort(mysort).toArray();
+      res.send(toys);
+    });
     app.get("/api/v1/:id", async (req, res) => {
       const id = req.params.id;
       const find = { _id: new ObjectId(id) };
