@@ -20,6 +20,17 @@ const client = new MongoClient(uri, {
     deprecationErrors: true,
   },
 });
+const verifyJWT = (req, res, next) => {
+  const query = req.headers?.authorization;
+  const queryToken = query?.split(" ")[1];
+  jwt.verify(queryToken, process.env.db_KEY, function (err, result) {
+    if (err) {
+      return res.status(401).send("Unauthorized Access");
+    }
+    req.decoded = result;
+    next();
+  });
+};
 
 async function run() {
   try {
@@ -42,35 +53,23 @@ async function run() {
       const result = await toyCollection.insertOne(toy);
       res.send(result);
     });
-    app.get(
-      "/api/query",
-      (req, res, next) => {
-        const query = req.headers?.authorization;
-        const queryToken = query?.split(' ')[1];
-        jwt.verify(queryToken, process.env.db_KEY, function (err, result) {
-          if (err) {
-            return res.status(401).send("Unauthorized Access");
-          }
-          req.decoded = result;
-          next();
-        });
-      },
-      async (req, res) => {
-        console.log(req.decoded);
-        if (req.decoded.email !== req.query.email) {
-          return res.status(401).send("Unauthorized Access");
-        }
-        const query = req.query;
-        console.log(query);
-        const toys = await toyCollection.find({ email: query.email }).toArray();
-        res.send(toys);
+    app.get("/api/query", verifyJWT, async (req, res) => {
+      console.log(req.decoded);
+      if (req.decoded.email !== req.query.email) {
+        return res.status(401).send("Unauthorized Access");
       }
-    );
-    app.delete("/api/query/:id", async (req, res) => { 
+      const query = req.query;
+      console.log(query);
+      const toys = await toyCollection.find({ email: query.email }).toArray();
+      res.send(toys);
+    });
+    app.delete("/api/query/:id", async (req, res) => {
       const params = req.params.id;
-      const result = await toyCollection.deleteOne({ _id: new ObjectId(params) });
+      const result = await toyCollection.deleteOne({
+        _id: new ObjectId(params),
+      });
       res.send(result);
-    })
+    });
     app.patch("/api/toyCollection/:id", async (req, res) => {
       const params = req.params.id;
       const toy = req.body;
@@ -84,22 +83,36 @@ async function run() {
       const toys = await toyCollection.find({}).toArray();
       res.send(toys);
     });
-    app.get("/api/all/limit", async (req, res) => { 
+    app.get("/api/all/limit", async (req, res) => {
       const cursor = await toyCollection
         .find({}, { sort: { _id: -1 } })
         .limit(20)
         .toArray();
       res.send(cursor);
-
-      })
-    app.get("/api/all/sortings/ascending", async (req, res) => {
+    });
+    app.get("/api/query/sortings/ascending", verifyJWT, async (req, res) => {
+      if (req.decoded.email !== req.query.email) {
+        console.log(req.decoded.email, req.query.email);
+        return res.status(401).send("Unauthorized Access");
+      }
+      const query = req.query;
       const mysort = { price: 1 };
-      const toys = await toyCollection.find({}).sort(mysort).toArray();
+      const toys = await toyCollection
+        .find({ email: query.email })
+        .sort(mysort)
+        .toArray();
       res.send(toys);
     });
-    app.get("/api/all/sortings/descending", async (req, res) => {
-      const mysort = { price: - 1 };
-      const toys = await toyCollection.find({}).sort(mysort).toArray();
+    app.get("/api/query/sortings/descending", verifyJWT, async (req, res) => {
+      if (req.decoded.email !== req.query.email) {
+        return res.status(401).send("Unauthorized Access");
+      }
+      const query = req.query;
+      const mysort = { price: -1 };
+      const toys = await toyCollection
+        .find({ email: query.email })
+        .sort(mysort)
+        .toArray();
       res.send(toys);
     });
     app.get("/api/v1/:id", async (req, res) => {
