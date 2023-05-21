@@ -4,7 +4,6 @@ const port = process.env.PORT || 3000;
 const cors = require("cors");
 const jwt = require("jsonwebtoken");
 require("dotenv").config();
-const blogs = require("./blogs.json");
 
 app.use(cors());
 app.use(express.json());
@@ -38,10 +37,21 @@ async function run() {
     await client.connect();
 
     const toyCollection = client.db("toyCollection").collection("toys");
+    const blogsCollection = client.db("toyCollection").collection("blogs");
 
+    app.get("/api/blogs", async (req, res) => {
+      const blogs = await blogsCollection.find().toArray();
+      res.send(blogs);
+    });
+    app.get("/api/blogs/:id", async (req, res) => {
+      const params = req.params.id;
+      const result = await blogsCollection.findOne({
+        _id: new ObjectId(params),
+      });
+      res.send(result);
+    });
     app.post("/jwt", async (req, res) => {
       const query = req.body;
-      console.log(query);
       const token = jwt.sign(query, process.env.DB_KEY, {
         expiresIn: "1h",
       });
@@ -54,7 +64,6 @@ async function run() {
       res.send(result);
     });
     app.get("/api/query", verifyJWT, async (req, res) => {
-      console.log(req.decoded);
       if (req.decoded.email !== req.query.email) {
         return res.status(401).send("Unauthorized Access");
       }
@@ -92,7 +101,6 @@ async function run() {
     });
     app.get("/api/query/sortings/ascending", verifyJWT, async (req, res) => {
       if (req.decoded.email !== req.query.email) {
-        console.log(req.decoded.email, req.query.email);
         return res.status(401).send("Unauthorized Access");
       }
       const query = req.query;
@@ -149,8 +157,5 @@ app.get("/", function (req, res) {
   res.send("Server is running");
 });
 
-app.get("/temp", (req, res) => {
-  res.send(blogs);
-});
 
 app.listen(port);
